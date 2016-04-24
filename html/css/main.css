@@ -1,0 +1,434 @@
+body {
+    background: #c6E0f5;
+}
+
+#main {
+    clear: both;
+    margin: 0px auto;
+    max-width: 80%;
+    width: 80%;
+}
+
+table.result {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-spacing: 5px;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	line-height: 1.42857
+}
+
+th {
+	font-size: 110%;
+}
+
+tr:first-child td:not(:first-child) {
+	background: #6a90c6;
+}
+
+tr:first-child td:first-child {
+	background: #6a90c6;
+	border-top-left-radius: 10px;
+}
+
+tr:first-child td:last-child {
+	background: #6a90c6;
+	border-top-right-radius: 10px;
+}
+
+#viewtab td {
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 3px solid #FFFECF;
+}
+
+#viewtab tr {
+	color: #6a90c6;
+	line-height: 200%;
+}
+
+#viewtab tr:first-child > td {
+	border-bottom: none!important;
+}
+
+#viewtab tr:first-child {
+	color: #FFFFFF!important;
+	border-bottom: none!important;
+}
+
+#viewtab tr:last-child {
+	border-bottom: none!important;
+}
+
+#editlabal td {
+	text-align: left;
+	vertical-align: middle;
+}
+
+#editlabal td:first-child {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#pagebtn a {
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0px 8px;
+    /*border: 1px solid #CCC;*/
+    border-radius: 4px;
+    color: #6a90c6;
+    font-weight: bold;
+    /*background: transparent linear-gradient(to bottom, #FFF 0%, #EEE 100%) repeat scroll 0% 0%;*/
+}
+
+#pagebtn a:hover {
+    /*background: #303030 none repeat scroll 0% 0%;*/
+    color: #6a90c6;
+    text-decoration: none;
+    filter: none;
+}
+
+#pagebtn .pagenow {
+    /*background: #303030 none repeat scroll 0% 0%;*/
+    color: #6a90c6;
+    text-decoration: none;
+    filter: none;
+}
+
+#pagebtn .pagebtnA a {
+    text-decoration: none;
+    float: none;
+    display: inline-block;
+    margin: 0px 3px;
+}
+
+#pagebtn .pagebtnA {
+    text-align: center;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+		overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+		-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+		-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+		display: block;
+}
+ol, ul {
+	list-style: none;
+}
+
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+		outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+		outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+button,
+input,
+select,
+textarea {
+	color: #666;
+	font-size: 13px;
+	font-size: 1.3rem;
+	font-family: "Lucida Grande", Arial, "Lucida Sans Unicode", sans-serif;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	color: #333;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+hr {
+	background-color: #ddd;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: square;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style-type: decimal;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+}
+dt {
+	color: #333;
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+    font-family: Georgia,"Times New Roman",Times,serif;
+	font-style: italic;
+	margin: 0 3em;
+}
+blockquote em, blockquote i, blockquote cite {
+	font-style: normal;
+}
+address {
+	margin-bottom: 1.5em;
+}
+pre {
+	background: #eee;
+	font: 12px "Courier 10 Pitch", Courier, monospace;
+	font-size: 1.2rem;
+	line-height: 1.625;
+	margin-bottom: 1.625em;
+	padding: 1.625em 1.625em;
+}
+code, kbd, tt, var {
+	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 1.2rem;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+select, button,
+input,
+select,
+textarea {
+		font-size: 100%; /* Corrects font size not being inherited in all browsers */
+		margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+		vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+		*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+select, button,
+input {
+		line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+		*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+select, button,
+html input[type="button"],
+input[type=file],
+input[type="reset"] {
+		cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+		-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+}
+input[type="checkbox"],
+input[type="radio"] {
+		box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+		padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+		-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+		box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+		-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+		border: 0;
+		padding: 0;
+}
+
+select, input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color: #000;
+	padding: 5px 7px;
+	font-size: 13px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus {
+	background: #fff;
+	border-color: #666;
+	color: #000;
+}
+
+input[type=reset] {
+}
+
+#fab {
+  position:absolute;
+  bottom:5%;
+  right:5%;
+}
+
+select, input[type=text] {
+  min-width: 95%;
+}
+
+#fab_text, input[type=submit] {
+  background: #444dc7;
+  color: #FFFECF;
+  border: none;
+  width:50px;
+  height:50px;
+  border-radius:40px;
+  font-size:40px;
+  text-align:center;
+}
+
+#fab_text > a {
+  color: #FFFECF!important;
+  text-decoration: none!important;
+}
+
+input[type=submit]:hover {
+  background: #FFFECF;
+  color: #444dc7;
+}
+
+#left {
+	float: left;
+	margin: 4% 0 2% 0;
+}
+
+#right {
+	float: right;
+	margin: 2% 5% 2% 0;
+}
+
+#top_bar {
+	max-height: 8%;
+}
+
+#top_bar > * > * > img {
+	max-width: 60px;
+}
+
+.left_title {
+  text-align: center;
+  background: #444dc7;
+  color: #FFFECF;
+  border-radius: 0 15px 15px 0;
+  padding: 8px;
+  width: 100%;
+  line-height: 200%;
+}
+
+.left_title:hover {
+  background: #FFFECF;
+  color: #444dc7;
+}
+
+#left > a {
+  width: 50px;
+  color: #333;
+  text-decoration: none;
+  font: 15px/25px Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none!important;
+}
